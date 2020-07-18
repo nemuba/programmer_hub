@@ -1,14 +1,20 @@
 nav{
+  
+  @extend .purple, .darken-4;
+
   .brand-logo{
     margin-left: 10px;
     .logo-title{
       font-size: 20px;
     }
   }
-
+  li{
+    height: 30px;
+  }
   .nav-image {
-    width: 50px;
-    margin-top: 8px;
+    width: 40px;
+    height: 40px;
+    margin-top:8px;
   }
 
   .search-field {

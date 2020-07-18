@@ -4,6 +4,7 @@ $(document).on "turbolinks:load", ->
     $('.unlike_' + e.target.id).show()
     count = parseInt($('.like_count_' + e.target.id).html())
     $('.like_count_' + e.target.id).html(count + 1)
+    Materialize.toast('Liked', 4000, 'green')
 
   $('body').on 'ajax:error', '.like', (e, data, status, xhr) ->
     Materialize.toast('Problem in like post', 4000, 'red')
@@ -13,6 +14,7 @@ $(document).on "turbolinks:load", ->
     $('.like_' + e.target.id).show()
     count = parseInt($('.like_count_' + e.target.id).html())
     $('.like_count_' + e.target.id).html(count - 1)
+    Materialize.toast('Dislike', 4000, 'green')
 
   $('body').on 'ajax:error', '.unlike', (e, data, status, xhr) ->
     Materialize.toast('Problem in unlike post', 4000, 'red')

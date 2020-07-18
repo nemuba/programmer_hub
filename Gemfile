@@ -16,7 +16,7 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
-gem 'devise'
+gem 'devise', '~>4.4.0'
 gem 'materialize-sass'
 gem 'material_icons'
 gem 'cancancan'
