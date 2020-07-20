@@ -6,6 +6,7 @@ class FollowsController < ApplicationController
       if current_user.follow(@user)
         format.json { render @user, status: :created }
         format.html { redirect_to :back, notice: 'User followed with success.' }
+        format.js
       else
         format.json { render json: nil, status: :unprocessable_entity }
         format.html { redirect_to :back }
@@ -18,6 +19,7 @@ class FollowsController < ApplicationController
       if current_user.stop_following(@user)
         format.json { head :no_content }
         format.html { redirect_to :back, notice: 'User unfollowed with success.'}
+        format.js
       else
         format.json { render json: nil, status: :unprocessable_entity }
         format.html { redirect_to :back }        

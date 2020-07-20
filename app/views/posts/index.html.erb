@@ -11,8 +11,18 @@
         <div class="card-content">
           <div class="row">
             <div class="col m12">
-              <%= form_for @post, url: "/posts.js", :method => "post", remote: true do |f| %>
-                <div class="input-field">
+              <%= form_for @post, remote: true, :authenticity_token => true do |f| %>
+                <div class="file-field input-field row">
+                  <div class="btn purple darken-4 col l12">
+                    <span>Image Post</span>
+                    <i class="material-icons">image</i>
+                    <%= f.file_field :image %>
+                  </div>
+                  <div class="file-path-wrapper col l12">
+                    <input class="file-path validate" type="text">
+                  </div>
+                </div>
+                <div class="input-field">                  
                   <%= f.text_area :body, placeholder: "What are you thinking about?", class: "materialize-textarea col l9" %>
                 </div>
                 <%= f.submit "Send", class: "btn purple darken-2" %>

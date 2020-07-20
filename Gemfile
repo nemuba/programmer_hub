@@ -28,6 +28,8 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
 gem 'acts_as_commentable'
 
+gem 'file_validators'
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end
